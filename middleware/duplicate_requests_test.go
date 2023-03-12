@@ -1,10 +1,11 @@
 package middleware
 
 import (
-	"github.com/geziyor/geziyor/client"
-	"github.com/stretchr/testify/assert"
 	"strings"
 	"testing"
+
+	"github.com/Garykom/geziyor/client"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestDuplicateRequests_ProcessRequest(t *testing.T) {

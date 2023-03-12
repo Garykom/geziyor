@@ -6,7 +6,7 @@ import (
 	"net/url"
 	"sync/atomic"
 
-	"github.com/geziyor/geziyor/internal"
+	"github.com/Garykom/geziyor/internal"
 )
 
 type ProxyURLKey int

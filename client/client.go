@@ -10,10 +10,10 @@ import (
 	"net/url"
 	"time"
 
+	"github.com/Garykom/geziyor/internal"
 	"github.com/chromedp/cdproto/dom"
 	"github.com/chromedp/cdproto/network"
 	"github.com/chromedp/chromedp"
-	"github.com/geziyor/geziyor/internal"
 	"golang.org/x/net/html/charset"
 	"golang.org/x/text/transform"
 )
@@ -139,12 +139,15 @@ func (c *Client) doRequestClient(req *Request) (*Response, error) {
 	// Decode response
 	if resp.Request.Method != "HEAD" && resp.ContentLength > 0 {
 		if req.Encoding != "" {
+			fmt.Println("req.Encoding=" + req.Encoding)
 			if enc, _ := charset.Lookup(req.Encoding); enc != nil {
 				bodyReader = transform.NewReader(bodyReader, enc.NewDecoder())
 			}
 		} else {
+			fmt.Println("CharsetDetect")
 			if !c.opt.CharsetDetectDisabled {
 				contentType := req.Header.Get("Content-Type")
+				fmt.Println("Content-Type=" + contentType)
 				bodyReader, err = charset.NewReader(bodyReader, contentType)
 				if err != nil {
 					return nil, fmt.Errorf("charset detection error on content-type %s: %w", contentType, err)

@@ -4,8 +4,9 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/geziyor/geziyor/internal"
 	"os"
+
+	"github.com/Garykom/geziyor/internal"
 )
 
 // JSONLine exports response data as JSON streaming file

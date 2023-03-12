@@ -14,16 +14,16 @@ import (
 	"github.com/chromedp/cdproto/dom"
 	"github.com/chromedp/chromedp"
 
+	"github.com/Garykom/geziyor"
+	"github.com/Garykom/geziyor/cache"
+	"github.com/Garykom/geziyor/cache/diskcache"
+	"github.com/Garykom/geziyor/client"
+	"github.com/Garykom/geziyor/export"
+	"github.com/Garykom/geziyor/internal"
+	"github.com/Garykom/geziyor/metrics"
 	"github.com/PuerkitoBio/goquery"
 	"github.com/elazarl/goproxy"
 	"github.com/fortytw2/leaktest"
-	"github.com/geziyor/geziyor"
-	"github.com/geziyor/geziyor/cache"
-	"github.com/geziyor/geziyor/cache/diskcache"
-	"github.com/geziyor/geziyor/client"
-	"github.com/geziyor/geziyor/export"
-	"github.com/geziyor/geziyor/internal"
-	"github.com/geziyor/geziyor/metrics"
 	"github.com/stretchr/testify/assert"
 )
 

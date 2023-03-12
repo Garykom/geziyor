@@ -1,9 +1,10 @@
 package middleware
 
 import (
-	"github.com/geziyor/geziyor/client"
 	"math/rand"
 	"time"
+
+	"github.com/Garykom/geziyor/client"
 )
 
 // delay delays requests
