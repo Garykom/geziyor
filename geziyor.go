@@ -1,13 +1,13 @@
 package geziyor
 
 import (
+	"github.com/Garykom/geziyor/cache"
+	"github.com/Garykom/geziyor/client"
+	"github.com/Garykom/geziyor/export"
+	"github.com/Garykom/geziyor/internal"
+	"github.com/Garykom/geziyor/metrics"
+	"github.com/Garykom/geziyor/middleware"
 	"github.com/chromedp/chromedp"
-	"github.com/geziyor/geziyor/cache"
-	"github.com/geziyor/geziyor/client"
-	"github.com/geziyor/geziyor/export"
-	"github.com/geziyor/geziyor/internal"
-	"github.com/geziyor/geziyor/metrics"
-	"github.com/geziyor/geziyor/middleware"
 	"golang.org/x/time/rate"
 
 	"io"
