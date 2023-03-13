@@ -137,7 +137,7 @@ func (c *Client) doRequestClient(req *Request) (*Response, error) {
 	bodyReader := io.LimitReader(resp.Body, c.opt.MaxBodySize)
 
 	// Decode response
-	fmt.Prinlnt("Decode response")
+	fmt.Println("Decode response")
 	if resp.Request.Method != "HEAD" && resp.ContentLength > 0 {
 		if req.Encoding != "" {
 			fmt.Println("req.Encoding=" + req.Encoding)
